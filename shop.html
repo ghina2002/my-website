@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="padding:20px;">All Products</h1>
+<span class="cart" onclick="toggleCart()">🛒</span>
+<div class="products">
+
+  <div class="product">
+    <img src="images/product1.jpg">
+    <h4>Anua-Niacinamide 10% + txa 4% Serum</h4>
+    <p>$27</p>
+    <button onclick="addToCart('Product 1', 20, 'images/product1.jpg')">
+  Add to Cart
+</button>
+  </div>
+
+  <div class="product">
+    <img src="images/product2.jpg">
+    <h4>Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum</h4>
+    <p>$27</p>
+    <button onclick="addToCart('Product 2', 30, 'images/product2.jpg')">
+  Add to Cart
+</button>
+  </div>
+
+</div>
+<div id="cart" class="cart">
+  <div class="cart-header">
+    <h2>Shopping cart (<span id="cart-count">0</span>)</h2>
+    <span onclick="toggleCart()">✖</span>
+  </div>
+
+  <div id="cart-items"></div>
+
+  <div class="cart-footer">
+    <p>Subtotal: $<span id="subtotal">0</span></p>
+    <button class="checkout-btn" onclick="goCheckout()">Checkout</button>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

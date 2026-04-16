@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        align-items: center;
+    }
+</style>
+<body>
+
+<div class="checkout-container">
+
+  <!-- Logo -->
+  <div class="checkout-logo">
+    <img src="images/logo.png" height="80px" >
+  </div>
+   <!-- Contact -->
+  <div class="contact-box">
+    <h3>Contact</h3>
+    <input type="text" id="phone" placeholder="Mobile phone number">
+    <p id="phone-error" class="error"></p>
+
+    <h3>Delivery</h3>
+    <div class="question">
+            <label for="location"><i><b>Country/Region </b></i></label></i></label>
+            <select id="location" name="location " placeholder="Country/Region ">
+                     <option>Lebanon</option>
+            </select>
+    </div>
+
+  <div class="lastname-box">
+    <h4>First Name</h4>
+    <input type="text" id="name" placeholder="First name">
+    <p id="name-error" class="error"></p>
+  <!-- Order Summary -->
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+    <div id="summary-items"></div>
+    <h2>Total: $<span id="summary-total">0</span></h2>
+  </div>
+
+
+    <button onclick="goNext()" class="continue-btn">
+      Continue
+    </button>
+  </div>
+
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>
